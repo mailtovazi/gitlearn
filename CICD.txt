@@ -1,0 +1,61 @@
+name: Test Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push:
+    name: Push to Another Branch
+    runs-on: ubuntu-latest
+name: Test Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push:
+    name: Push to Another Branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Create and Switch to Another Branch
+        run: |
+          git checkout -b master
+
+      - name: Push Changes
+        run: |
+          git push origin master
+thisis the full code
+
+
+ yes i can write a dockerfile
+FROM ubuntu:20.04
+WORKDIR /app
+COPY localfile.txt /app/
+docker build command
+docker build -t my-image-name .
+docker run command
+docker run -9 443:443 imagename
+docker run -p 443:443 imagename
+kubectl logs podname
+---
+- name: List Files on Remote Host
+  hosts: your_remote_host
+  tasks:
+    - name: Find Files
+      cmd: ls -ltr
+---
+- name: List Files on Remote Host
+  hosts: your_remote_host
+  tasks:
+    - name: Find Files
+      command: ls -ltr
+instead of cmd write command
+ansible-playbook -i inventory playbook.yml
